@@ -24,8 +24,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+    <html lang="ko">
+      <body className="bg-background text-gray-100">
+        <nav className="w-full border-b border-line-light">
+          <header className="mx-auto flex h-[60px] w-full max-w-header items-center px-4">
+            <h1 className="text-lg font-bold text-gray-900">WithPet</h1>
+          </header>
+        </nav>
+
+        <main className="mx-auto w-full max-w-layout pb-20">{children}</main>
+      </body>
     </html>
   );
 }
