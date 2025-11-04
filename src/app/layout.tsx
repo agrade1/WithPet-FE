@@ -32,7 +32,7 @@ export default function RootLayout({
           </header>
         </nav>
 
-        <main className="mx-auto w-full max-w-layout pb-20">{children}</main>
+        <main className="mx-auto w-full max-w-layout py-20">{children}</main>
       </body>
     </html>
   );
