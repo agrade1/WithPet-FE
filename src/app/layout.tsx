@@ -1,7 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 
 import type { Metadata } from "next";
+
 import "./globals.css";
+import ReduxProvider from "src/store/ReduxProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,13 +28,15 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className="bg-background text-gray-100">
-        <nav className="w-full border-b border-line-light">
-          <header className="mx-auto flex h-[60px] w-full max-w-header items-center px-4">
-            <h1 className="text-lg font-bold text-gray-900">WithPet</h1>
+        <ReduxProvider>
+          <header className="w-full border-b border-line-light">
+            <nav className="mx-auto flex h-[60px] w-full max-w-header items-center px-4">
+              <h1 className="text-lg font-bold text-gray-900">WithPet</h1>
+            </nav>
           </header>
-        </nav>
 
-        <main className="mx-auto w-full max-w-layout py-20">{children}</main>
+          <main className="mx-auto w-full max-w-layout py-20">{children}</main>
+        </ReduxProvider>
       </body>
     </html>
   );
