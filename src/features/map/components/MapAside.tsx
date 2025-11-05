@@ -2,7 +2,7 @@
 
 export default function MapAside() {
   return (
-    <aside className="flex-col-between border-1 absolute left-[20px] top-1/2 h-full max-h-[calc(100%-40px)] w-full max-w-[450px] -translate-y-1/2 transform rounded-2xl bg-white">
+    <aside className="flex-col-between absolute left-[20px] top-1/2 z-[9999] h-full max-h-[calc(100%-40px)] w-full max-w-[450px] -translate-y-1/2 transform rounded-2xl border-4 border-line-light bg-white">
       <div className="flex h-full flex-col overflow-y-auto p-4">
         {/* 위치 찾기 */}
         <div>
