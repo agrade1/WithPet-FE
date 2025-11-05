@@ -1,10 +1,10 @@
+import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import type { Metadata } from "next";
+import MSWProvider from "@/providers/MSWProvider";
+import ReduxProvider from "@/store/ReduxProvider";
 
-import "./globals.css";
-import ReduxProvider from "src/store/ReduxProvider";
-import MSWProvider from "src/providers/MSWProvider";
+import type { Metadata } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +32,7 @@ export default function RootLayout({
         <ReduxProvider>
           <MSWProvider>
             <header className="w-full border-b border-line-light">
-              <nav className="mx-auto flex h-[60px] w-full max-w-header items-center px-4">
+              <nav className="container-header mx-auto flex h-[60px] w-full items-center px-4">
                 <h1 className="text-lg font-bold text-gray-900">WithPet</h1>
               </nav>
             </header>
