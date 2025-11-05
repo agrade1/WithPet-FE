@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import ReduxProvider from "src/store/ReduxProvider";
+import MSWProvider from "src/providers/MSWProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,13 +30,14 @@ export default function RootLayout({
     <html lang="ko">
       <body className="bg-background text-gray-100">
         <ReduxProvider>
-          <header className="w-full border-b border-line-light">
-            <nav className="mx-auto flex h-[60px] w-full max-w-header items-center px-4">
-              <h1 className="text-lg font-bold text-gray-900">WithPet</h1>
-            </nav>
-          </header>
-
-          <main className="mx-auto w-full max-w-layout py-20">{children}</main>
+          <MSWProvider>
+            <header className="w-full border-b border-line-light">
+              <nav className="mx-auto flex h-[60px] w-full max-w-header items-center px-4">
+                <h1 className="text-lg font-bold text-gray-900">WithPet</h1>
+              </nav>
+            </header>
+            <main className="mx-auto w-full max-w-layout py-20">{children}</main>
+          </MSWProvider>
         </ReduxProvider>
       </body>
     </html>
