@@ -12,5 +12,17 @@ body {
 }
 
 .container-header {
-  @apply max-w-wrapper mx-auto px-4;
+  @apply mx-auto max-w-header px-4;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.flex-col-between {
+  @apply flex flex-col justify-between;
 }
