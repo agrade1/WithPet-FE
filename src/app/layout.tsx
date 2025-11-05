@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
-
 import MSWProvider from "@/providers/MSWProvider";
 import ReduxProvider from "@/store/ReduxProvider";
 
@@ -31,12 +30,12 @@ export default function RootLayout({
       <body className="bg-background text-gray-100">
         <ReduxProvider>
           <MSWProvider>
-            <header className="w-full border-b border-line-light">
+            <header className="border-line-light w-full border-b">
               <nav className="container-header mx-auto flex h-[60px] w-full items-center px-4">
                 <h1 className="text-lg font-bold text-gray-900">WithPet</h1>
               </nav>
             </header>
-            <main className="mx-auto w-full max-w-layout py-20">{children}</main>
+            <main className="max-w-layout mx-auto w-full py-20">{children}</main>
           </MSWProvider>
         </ReduxProvider>
       </body>
