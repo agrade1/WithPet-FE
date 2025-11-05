@@ -8,9 +8,9 @@ body {
 }
 
 .container-layout {
-  @apply max-w-layout mx-auto px-4;
+  @apply mx-auto max-w-layout px-4;
 }
 
 .container-header {
-  @apply max-w-header mx-auto px-4;
+  @apply max-w-wrapper mx-auto px-4;
 }

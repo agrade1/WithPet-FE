@@ -1,3 +1,5 @@
+import lineClamp from "@tailwindcss/line-clamp";
+
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -12,7 +14,7 @@ const config: Config = {
       colors: {
         // 기본 배경 & 선 색상
         background: {
-          DEFAULT: "#FFFFFF", // 기본 흰색 배경
+          DEFAULT: "#ffffff", // 기본 흰색 배경
           100: "#FFFDF4", // 연한 주황 포인트 배경
         },
         line: {
@@ -26,6 +28,12 @@ const config: Config = {
           200: "#F6F6F9",
           300: "#E4E4E6",
           900: "#000000",
+        },
+        orange: {
+          100: "#fffdf4",
+          200: "#ffce88",
+          300: "#ff9806",
+          800: "#975800",
         },
 
         // 경고 / 오류 관련
@@ -45,11 +53,15 @@ const config: Config = {
       // 기본 레이아웃 너비
       maxWidth: {
         layout: "1440px",
-        header: "1024px",
+        wrapper: "1024px",
+        main: "972px",
+        modal: "600px",
+        edit: "500px",
+        big: "470px",
       },
     },
   },
-  plugins: [],
+  plugins: [lineClamp],
 };
 
 export default config;

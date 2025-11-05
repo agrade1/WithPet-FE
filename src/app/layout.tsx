@@ -26,8 +26,8 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className="bg-background text-gray-100">
-        <nav className="w-full border-b border-line-light">
-          <header className="mx-auto flex h-[60px] w-full max-w-header items-center px-4">
+        <nav className="border-line-100 w-full border-b border-b-gray-300">
+          <header className="max-w-wrapper mx-auto flex h-[60px] w-full items-center px-4">
             <h1 className="text-lg font-bold text-gray-900">WithPet</h1>
           </header>
         </nav>
