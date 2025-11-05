@@ -12,7 +12,7 @@ body {
 }
 
 .container-header {
-  @apply mx-auto max-w-header px-4;
+  @apply max-w-wrapper mx-auto px-4;
 }
 
 .flex-center {
