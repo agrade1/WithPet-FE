@@ -20,13 +20,18 @@ const config: Config = {
         line: {
           light: "#FFCE88",
           strong: "#FF9806",
+          100: "#E4E4E6",
+          200: "#F6F6F9",
+          300: "#A6A6A6",
+          900: "#000000",
         },
 
         // 텍스트 관련
         gray: {
-          100: "#A6A6A6",
-          200: "#F6F6F9",
-          300: "#E4E4E6",
+          100: "#F6F6F9",
+          200: "#E4E4E6",
+          300: "#A6A6A6",
+          400: "#868688",
           900: "#000000",
         },
         orange: {
@@ -48,6 +53,14 @@ const config: Config = {
           100: "#FFCEB2",
           200: "#FFCE88",
         },
+      },
+      width: {
+        layout: "1440px",
+        wrapper: "1024px",
+        main: "972px",
+        modal: "600px",
+        edit: "500px",
+        big: "470px",
       },
 
       // 기본 레이아웃 너비
