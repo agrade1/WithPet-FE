@@ -1,3 +1,9 @@
+import LoginForm from "./loginform";
+
 export default function LoginPage() {
-  return <div>로그인 페이지</div>;
+  return (
+    <main className="">
+      <LoginForm />
+    </main>
+  );
 }
