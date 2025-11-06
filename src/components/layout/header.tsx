@@ -1,17 +1,30 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+  const isMapActive = /^\/map(\/|$)/.test(pathname);
+  const isCutActive = /^\/community(\/|$)/.test(pathname);
+
   return (
-    <header className="fixed flex w-full items-center justify-center border-b border-b-gray-200 bg-white">
-      <nav className="w-wrapper flex h-[50px] items-center justify-between">
+    <header className="fixed flex h-12 w-full items-center justify-center border-b border-b-gray-200 bg-white">
+      <nav className="w-wrapper flex items-center justify-between">
         <div className="flex w-[285px] items-center justify-between">
           <Link href="/" className="text-lg font-bold text-gray-900">
             WithPet
           </Link>
-          <Link href="map" className="text-gray-300 hover:text-orange-300">
+          <Link
+            href="/map"
+            aria-current={isMapActive ? "page" : undefined}
+            className="text-gray-400 hover:text-orange-300 aria-[current=page]:font-semibold aria-[current=page]:text-orange-300"
+          >
             지도
           </Link>
-          <Link href="community" className="text-gray-300 hover:text-orange-300">
+          <Link
+            href="/community"
+            aria-current={isCutActive ? "page" : undefined}
+            className="text-gray-400 hover:text-orange-300 aria-[current=page]:font-semibold aria-[current=page]:text-orange-300"
+          >
             커뮤니티
           </Link>
         </div>
