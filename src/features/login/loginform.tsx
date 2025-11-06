@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function LoginForm() {
   return (
-    <section className="bg-100 mx-auto mb-10 mt-8 w-full max-w-wrapper rounded-[28px]">
+    <section className="mx-auto mb-10 mt-8 w-full max-w-wrapper rounded-[28px] bg-[#FFFDF4]">
       <div className="mx-auto flex max-w-[620px] flex-col items-center py-24">
         {/* 타이틀 */}
         <div className="mb-7 flex items-baseline gap-3">
